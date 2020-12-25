@@ -1,11 +1,7 @@
 <?php
-    class BaseModel {
-
-        protected $connection;
+    class BaseModel extends DB {
 
         public function __construct() {
-            $db = new DB();
-
-            $this->connection = $db->connect();
+            $this->connect();
         }
     }

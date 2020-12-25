@@ -30,6 +30,10 @@ body {
 }
 
 .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: #333;
     color: #f2f2f2;
     text-align: center;
@@ -40,5 +44,35 @@ body {
 
 .main {
     padding: 32px;
-    min-height: 80%;
+}
+
+.center-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.form-column {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label:not(:first-child) {
+    margin-top: 8px;
+}
+
+.form-button {
+    padding: 6px;
+    margin-top: 16px;
+}
+
+.error {
+    color: red;
+}
+
+.info {
+    color: blue;
 }

@@ -6,12 +6,14 @@
 
         public static function start() {
             self::init();
+            session_start();
             spl_autoload_register(array(__CLASS__, 'classLoader'));
             self::router();
         }
 
         private static function init() {
             define('ROOT', getcwd().DIRECTORY_SEPARATOR);
+            define('CONFIG_PATH', ROOT.'config'.DIRECTORY_SEPARATOR);
             define('CORE_PATH', ROOT.'core'.DIRECTORY_SEPARATOR);
             define('MODEL_PATH', ROOT.'models'.DIRECTORY_SEPARATOR);
             define('VIEW_PATH', ROOT.'views'.DIRECTORY_SEPARATOR);
@@ -21,6 +23,8 @@
             define('CONTROLLER', isset($_REQUEST['controller']) ? ucfirst($_REQUEST['controller']) : self::DEFAULT_CONTROLLER);
             define('ACTION', isset($_REQUEST['action']) ? $_REQUEST['action'] : self::DEFAULT_ACTION);
 
+            require CONFIG_PATH.'db.conf.php';
+            require CORE_PATH.'DB.php';
             require CORE_PATH.'BaseController.php';
             require CORE_PATH.'BaseModel.php';
         }

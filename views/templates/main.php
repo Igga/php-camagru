@@ -6,8 +6,8 @@
         <title>Camagru</title>
         <meta name="description" content="Camagru project">
         <meta name="author" content="bmanfrey">
-        <link rel="icon" type="image/png" href="static/favicon.ico">
-        <link rel="stylesheet" href="static/style.css">
+        <link rel="icon" type="image/png" href="/static/favicon.ico">
+        <link rel="stylesheet" href="/static/style.css">
 
     </head>
 
